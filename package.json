@@ -8,6 +8,7 @@
     "test": "test"
   },
   "scripts": {
+    "gscli": "babel-node ./bin/gscli.js",
     "test": "truffle test"
   },
   "repository": {
@@ -25,6 +26,15 @@
   },
   "devDependencies": {
     "@digix/tempo": "^0.2.0",
-    "eth-lightwallet": "*"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "base64-js": "^1.2.1",
+    "cids": "^0.5.2",
+    "eth-lightwallet": "*",
+    "ipfs-api": "^15.0.1",
+    "truffle-contract": "^3.0.0",
+    "web3": "^1.0.0-beta.24",
+    "yargs": "^9.0.1"
   }
 }
