@@ -1,9 +1,5 @@
 #!/usr/bin/env node
-import { default as yargs } from 'yargs'
 import { default as initializeLib } from '../index'
-import { default as base64js } from 'base64-js'
-import { default as CID } from 'cids'
-import { default as keccakHash } from 'keccak'
 
 const RPC_HOST = 'localhost'
 const RPC_PORT = '8545'
@@ -54,8 +50,9 @@ if (command === 'confirm') {
   transaction.data = args[4]
   transaction.operation = args[5]
   transaction.nonce = args[6]
+  var subject = args[7]
   let gslib = initializeLib(RPC_HOST, RPC_PORT, user)
-  gslib.confirmTransaction(safeAddress, transaction)
+  gslib.confirmTransaction(safeAddress, transaction, subject)
     .then((result) => {
     	console.log('result ' + result)
     })
